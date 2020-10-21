@@ -1,0 +1,14 @@
+<ul id="langs">
+    <li
+        id="{{lang}}"
+        *ngFor="let lang of dataServices.data.langs;"
+    >
+        <a
+            href="#"
+            (click)="changeLang(lang);"
+        >
+            ({{dataServices.data.config.langs[lang]}}) -
+            <b>{{lang}}</b>
+        </a>
+    </li>
+</ul>

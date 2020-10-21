@@ -1,0 +1,16 @@
+<div class="txt">
+    <var *ngFor="let txt of dataServices.data['offer'];">{{txt[dataServices.data.langIndex]}}</var>
+</div>
+<div
+    class="cta"
+    *ngIf="dataServices.data['cta']"
+>
+    <a
+        href="#"
+        (click)="dataServices.launchSite();"
+    >
+        <var>
+            {{dataServices.data['cta'][dataServices.data.langIndex]}}
+        </var>
+    </a>
+</div>

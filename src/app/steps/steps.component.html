@@ -1,0 +1,19 @@
+<a
+    *ngFor="let txt of dataServices.data['steps']; let i = index;"
+    href="#"
+    class="step"
+    id="step{{i+1}}"
+    (click)="dataServices.launchSite();"
+>
+    <img
+        src="assets/img/step{{i+1}}.png"
+        alt="step {{i+1}}"
+    >
+    <div class="stepTxt">
+        <div class="wrapper">
+            <div class="txt">
+                <var>{{txt[dataServices.data.langIndex]}}</var>
+            </div>
+        </div>
+    </div>
+</a>

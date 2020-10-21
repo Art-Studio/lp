@@ -1,0 +1,77 @@
+<div
+    #mainBox
+    id="mainBox"
+    [class.menuTrue]="dataServices.data.menuTrue"
+    (window:resize)="onResize(mainBox.offsetWidth)"
+>
+    <div id="header">
+        <div id="bgBox">
+            <img
+                [ngStyle]="{
+                    backgroundImage: 'url(assets/img/' + (mainBox.offsetWidth <= 768 ? '768' : '1920') + '/default.png)'
+                }"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                alt
+            >
+        </div>
+        <div id="logo">
+            <img
+                src="assets/img/logos/brand_logo.svg"
+                alt
+            >
+        </div>
+        <div id="offerBox">
+            <div class="wrapper">
+                <div class="offer">
+                    <div class="frame">
+                        <app-offer></app-offer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="steps">
+        <div class="wrapper">
+            <app-steps></app-steps>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="logos">
+            <app-logos></app-logos>
+        </div>
+        <div id="icons">
+            <app-icons></app-icons>
+        </div>
+        <div id="licenceInfo">
+            <var>
+                {{dataServices.data['config']['license'][dataServices.data.lang]}}
+            </var>
+        </div>
+    </div>
+    <div
+        id="menuBtn"
+        *ngIf="dataServices.data.langs.length > 1"
+    >
+        <div class="wrapper">
+            <a
+                href="#"
+                (click)="menuToggle();"
+                (mouseover)="menuToggle();"
+            >
+                {{dataServices.data.lang}}
+            </a>
+        </div>
+    </div>
+    <div id="menuBox">
+        <div class="wrapper">
+            <div
+                class="items"
+                (mouseleave)="menuToggle();"
+            >
+                <div class="wrapper">
+                    <app-langs></app-langs>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,311 @@
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+img{
+	display: block;
+}
+
+var{
+	font-style: normal;
+	display: inline-block;
+}
+
+body{
+	margin: 0;
+	background: #0d0d0d;
+}
+#mainBox.menuTrue{
+	pointer-events: none;
+}
+
+#mainBox{
+	color: #fff;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+#header{
+	position: relative;
+}
+#header > div{
+	position: absolute;
+	width: 100%;
+}
+#header #bgBox{
+	overflow: hidden;
+	position: relative;
+}
+#header #bgBox img{
+	position: relative;
+    left: 0;
+	width: 100%;
+	height: 480px;
+	background-position: 50%;
+	transition: background-image 0.2s linear;
+}
+#header #logo{
+	top: 56px;
+	left: 0;
+}
+#header #logo img{
+	width: 236px;
+	margin: auto;
+}
+#header #offerBox{
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+#header #offerBox .wrapper{
+	display: table;
+    height: 100%;
+    width: 100%;
+}
+#header #offerBox .offer{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#header .offer .frame{
+	max-width: 500px;
+    margin: 30px auto 0;
+}
+#header .offer .frame div{
+	padding: 10px;
+}
+#header .offer .txt var{
+	font-size: 22px;
+	line-height: normal;
+	font-style: italic;
+	font-weight: 700;
+	display: block;
+}
+#header .offer .txt p{
+	margin: 1px;
+}
+#header .offer .cta a{
+	display: inline-block;
+	background: rgba(255,149,0,1);
+	color: #000;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 10px 20px;
+	min-width: 120px;
+}
+#header .offer .cta a:hover{
+	background: rgba(255,255,255,1);
+}
+
+#affLogo{
+	position: relative;
+    top: 30px;
+}
+#affLogo a{
+	display: inline-block;
+}
+#affLogo a img{
+	max-height: 80px;
+}
+
+#steps{
+	text-align: center;
+	padding: 28px 5px;
+	background: #262626;
+}
+#steps .wrapper{
+	margin: auto;
+}
+#steps .step{
+	display: inline-block;
+	position: relative;
+	margin: 5px;
+	background: #000;
+}
+#steps .step img{
+	opacity: 0.9;
+}
+#steps .step:hover img{
+	opacity: 1;
+}
+#steps .step .stepTxt{
+	position: absolute;
+    top: 0;
+	left: 0;
+	height: 100%;
+    width: 100%;
+}
+#steps .step .wrapper{
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+#steps .step .txt{
+	display: table-cell;
+    vertical-align: middle;
+	text-align: left;
+	color: #fff;
+	padding: 30px;
+}
+#steps .step .txt{
+	font-size: 18px;
+	font-weight: 700;
+	line-height: normal;
+}
+#steps .step .txt var{
+	font-style: italic;
+	text-transform: uppercase;
+	text-align: center;
+	width: 145px;
+	display: block;
+}
+
+#footer{
+	padding: 30px 0;
+    max-width: 930px;
+    margin: auto;
+    box-sizing: border-box;
+}
+#footer div{
+	padding: 12px;
+	text-align: center;
+}
+#footer img{
+	padding: 10px;
+	display: inline-block;
+}
+#footer #logos{
+	padding: 12px 0;
+}
+#footer #licenceInfo{
+	color: #808080;
+}
+
+#menuBtn{
+	position: fixed;
+    top: 15px;
+    left: 0;
+    width: 100%;
+}
+#menuBtn .wrapper{
+	max-width: 950px;
+	margin: auto;
+	overflow: hidden;
+}
+#menuBtn a{
+	background: rgba(255,149,0,1);
+    float: right;
+    margin-right: 15px;
+    padding: 6px 8px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    font-style: italic;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#menuBtn a:hover{
+	background: rgba(255,255,255,1);
+}
+
+#menuBox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+#menuBox > .wrapper{
+	max-width: 950px;
+	margin: auto;
+	height: 100%;
+}
+#menuBox .items{
+    /*width: 320px;*/
+    float: right;
+    /*height: 100%;*/
+    overflow: auto;
+    position: relative;
+    top: 10px;
+    right: 12px;
+    padding-top: 40px;
+}
+#menuBox .items .wrapper{
+	background: rgba(26,26,26,0.9);
+    padding: 12px;
+}
+#menuBox ul{
+	max-width: 170px;
+    margin: 0 auto;
+    padding: 10px 10px 0;
+    list-style: none;
+}
+#menuBox li{
+    padding: 4px 0;
+	text-align: right;
+}
+#menuBox li a{
+	text-decoration: none;
+	font-size: 16px;
+	line-height: normal;
+	display: block;
+	padding: 4px 8px 4px 4px;
+	color: #bfbfbf;
+	max-width: 180px;
+	font-style: italic;
+}
+#menuBox li a:hover{
+	color: #000;
+	background: rgba(255,149,0,1);
+}
+#menuBox a b{
+	color: #fff;
+}
+#menuBox a:hover b{
+	color: #000;
+}
+
+#closeMenu{
+	position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+}
+#closeMenu .wrapper{
+	overflow: hidden;
+    max-width: 950px;
+    margin: auto;
+}
+#closeMenu a{
+	float: right;
+	background: rgba(255,149,0,1);
+	padding: 6px;
+    border-radius: 2px;
+	margin-right: 20px;
+}
+#closeMenu a:hover{
+	background: rgba(255,255,255,1);
+}
+
+body.init{
+	display: none;
+}
+#mainBox.menuTrue #menuBox{
+	display: block;
+	pointer-events: all;
+}
+
+
+@media screen and (max-width: 956px){
+	body #steps > .wrapper{
+		max-width: 380px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	#header #logo img{
+		width: 160px;
+	}
+}
